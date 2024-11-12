@@ -1,5 +1,5 @@
 # Ex.07:INTRACTIVE PHOTO GALLERY
-## Date:11/12/2024
+## Date:12/11/2024
 
 ## AIM:
 To design a book front cover page using HTML and CSS.
