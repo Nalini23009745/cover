@@ -1,5 +1,5 @@
-# Ex.07:INTRACTIVE PHOTO GALLERY
-## Date:12/11/2024
+# Ex.05 Book Front Cover Page Design
+## Date:19/11/2024
 
 ## AIM:
 To design a book front cover page using HTML and CSS.
@@ -35,85 +35,172 @@ Publish the website in the LocalHost.
 ```
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Photo Gallery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Cover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;600&family=Roboto+Serif:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 20;
+      padding: 20;
+      background-color: #cccec9;
+      font-family: 'Comic Sans MS', sans-serif;
+    }
+
+    .book-cover {
+      width: 500px;
+      height: 700px;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Main Image */
+    .book-cover .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 100%;
+    }
+     
+
+    /* Main Title */
+    .book-cover .title1 {
+      position: absolute;
+      top: 100px;
+      left: 35px;
+      font-family: 'Lobster',cursive;
+      font-size: 45px;
+      font-weight: 600;
+      color:  #ff03fb;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    /* Horizontal Line 1 */
+    .book-cover .line1 {
+      position: absolute;
+      top: 143px;
+      left: 35px;
+      width: 427px;
+    }
+    
+
+    /* Subtitle 1 */
+    .book-cover .subtitle1 {
+      position: absolute;
+      top: 190px;
+      left: 100px;
+      font-size: 18px;
+      font-family: 'allura', cursive;
+      font-weight: 600;
+      color: #2298f3;
+    }
+
+    /* Subtitle 2 */
+    .book-cover .subtitle2 {
+      position: absolute;
+      top: 210px;
+      left: 80px;
+      font-size: 18px;
+      font-family: 'allura', cursive;
+      font-weight: 600;
+      color: #2298f3;
+    }
+
+    /* Subtitle 3 */
+    .book-cover .subtitle3 {
+      position: absolute;
+      top: 230px;
+      left: 70px;
+      font-size: 18px;
+      font-family: 'allura', cursive;
+      font-weight: 600;
+      color:  #2298f3;
+    }
+
+    /* Horizontal Line 3 */
+    .book-cover .line3 {
+      position: absolute;
+      bottom: 30px;
+      left: 20px;
+      width: 350px;
+    }
+
+    /* Author Image */
+    .book-cover .mypic {
+      position: absolute;
+      top: 570px;
+      left: 380px;
+      width: 100px;
+      height: 100px;
+      border-radius: 30%;
+      border: 3px solid  #7DF9FF;
+    }
+
+    .book-cover .mypic img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    /* 2024 Text */
+    .book-cover .end {
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
+      font-size: 18px;
+      color: #1F51FF;
+      font-weight: 600;
+    }
+
+    /* Author Name */
+    .book-cover .author {
+      position: absolute;
+      bottom: 5px;
+      right: 16px;
+      font-size: 14px;
+      color: #6ee2f7;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    hr {
+      border: none;
+      height: 3px;
+      background-color:  #7DF9FF;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Interactive Photo Gallery</h1>
-    <div id="image">Hover over an image below to display here.</div>
-    
-    <div class="gallery">
-        <img class = "preview" alt = "Night Sky" src = "https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" alt = "Rose" src = "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" src = "https://images.pexels.com/photos/2130610/pexels-photo-2130610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt = "Paris" onmouseover = "upDate(this)" onmouseout = "unDo()">
-        <img class = "preview" alt = "Turtle" src = "https://images.pexels.com/photos/5277693/pexels-photo-5277693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" alt = "Cute Puppy" src = "https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" src = "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=600" alt = "Baby" onmouseover = "upDate(this)" onmouseout = "unDo()">
-    </div>
-    <script src="script.js"></script>
+  <div class="book-cover">
+    <img src="background.jpg" alt="Book Cover Image" class="image">
+    <div class="insight">SCI-FI</div>
+    <div class="line1"><hr></div>
+    <div class="title1">fundamental of web development</div>
+    <div class="line2"><hr></div>
+    <div class="subtitle2">Activation-Synthesis of web</div>
+    <div class="line3"><hr></div>
+    <div class="end">2024    SCI-FIC</div>
+    <div class="author">NALINI.P</div>
+  </div>
 </body>
+
 </html>
-```
-## style.css
-```
-body{
-    margin: 2%;
-    border: 1px solid black;
-    background-color: #b3b3b3;
-}
-#image{
-line-height:100px;
-    width: 355px;
-height: 170px;
-    border:5px solid black;
-    margin:0 auto;
-background-color: #8e68ff;
-background-image: url('');
-background-repeat: no-repeat;
-color:#FFFFFF;
-text-align: center;
-background-size: 100%;
-margin-bottom:25px;
-font-size: 120%;
-}
-.preview{
-    width:10%;
-    margin-left:17%;
-border: 9px solid black;
-}
-img{
-    width:95%;
-}
-```
 
-## script.js
-```
-// Reference to the image container
-const imageDiv = document.getElementById('image');
-const originalImageUrl = ''; // Set this to the URL of your original image
-const originalText = "Hover over an image below to display here."; // Original text
-
-function upDate(previewPic) {
-    // Change the background image to the source of the hovered image
-    imageDiv.style.backgroundImage = url('${previewPic.src}');
-    
-    // Update the text to the alt text of the hovered image
-    imageDiv.innerHTML = previewPic.alt;
-}
-
-function unDo() {
-    // Reset the background image to the original URL
-    imageDiv.style.backgroundImage = url('${originalImageUrl}'); // Use the original image URL here
-    
-    // Change the text back to the original text
-    imageDiv.innerHTML = originalText;
 ```
 
 ## OUTPUT:
-![alt text](<Screenshot (215).png>)
+![alt text](<Screenshot (256).png>)
 
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
